@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://cm4d4g15xnqeu"]
+
+[ext_resource type="PackedScene" uid="uid://6g7tl2pr8g08" path="res://scenes/Player_Scene.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://ctvglkuejbvoh" path="res://batch_1.tscn" id="3_0kqgc"]
+[ext_resource type="Script" path="res://scenes/Camera2D.gd" id="3_at4oy"]
+[ext_resource type="Script" path="res://addons/godot_rl_agents/sync.gd" id="3_ddvue"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="OG_Ant" parent="." instance=ExtResource("2")]
+position = Vector2(-51, 147)
+
+[node name="Batch 1" parent="." instance=ExtResource("3_0kqgc")]
+
+[node name="Batch 2" parent="." instance=ExtResource("3_0kqgc")]
+position = Vector2(416, 0)
+
+[node name="Batch 3" parent="." instance=ExtResource("3_0kqgc")]
+position = Vector2(0, 319)
+
+[node name="Batch 4" parent="." instance=ExtResource("3_0kqgc")]
+position = Vector2(416, 319)
+
+[node name="Batch 5" parent="." instance=ExtResource("3_0kqgc")]
+position = Vector2(832, 0)
+
+[node name="Batch 6" parent="." instance=ExtResource("3_0kqgc")]
+position = Vector2(1248, 0)
+
+[node name="Batch 7" parent="." instance=ExtResource("3_0kqgc")]
+position = Vector2(832, 319)
+
+[node name="Batch 8" parent="." instance=ExtResource("3_0kqgc")]
+position = Vector2(1248, 319)
+
+[node name="Batch 9" parent="." instance=ExtResource("3_0kqgc")]
+position = Vector2(0, 639)
+
+[node name="Batch 10" parent="." instance=ExtResource("3_0kqgc")]
+position = Vector2(416, 639)
+
+[node name="Batch 11" parent="." instance=ExtResource("3_0kqgc")]
+position = Vector2(0, 958)
+
+[node name="Batch 12" parent="." instance=ExtResource("3_0kqgc")]
+position = Vector2(416, 958)
+
+[node name="Batch 13" parent="." instance=ExtResource("3_0kqgc")]
+position = Vector2(832, 639)
+
+[node name="Batch 14" parent="." instance=ExtResource("3_0kqgc")]
+position = Vector2(1248, 639)
+
+[node name="Batch 15" parent="." instance=ExtResource("3_0kqgc")]
+position = Vector2(832, 958)
+
+[node name="Batch 16" parent="." instance=ExtResource("3_0kqgc")]
+position = Vector2(1248, 958)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(832, 639)
+current = true
+zoom = Vector2(0.56, 0.56)
+position_smoothing_enabled = true
+script = ExtResource("3_at4oy")
+
+[node name="Sync" type="Node" parent="."]
+script = ExtResource("3_ddvue")
